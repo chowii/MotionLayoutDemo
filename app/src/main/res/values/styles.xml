@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ThemeOverlay.Button.Primary" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="TextAppearance.Button.Primary" parent="TextAppearance.AppCompat.Widget.Button.Colored" />
+
+    <style name="ThemeOverlay.Button.Flat" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorControlHighlight">@color/color_tint_flat</item>
+    </style>
+
+    <style name="Button.Primary" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:theme">@style/ThemeOverlay.Button.Primary</item>
+        <item name="android:textAppearance">@style/TextAppearance.Button.Primary</item>
+    </style>
+
+    <style name="Button.Primary.Flat" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:theme">@style/ThemeOverlay.Button.Flat</item>
+    </style>
+</resources>
