@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun onSceneTypeClicked(): (Int) -> Unit {
-        return { sceneRes ->
-            val intent = Intent(this, SimpleSceneActivity::class.java).apply {
+    private fun onSceneTypeClicked(): (Int, SceneType) -> Unit {
+        return { sceneRes, sceneType ->
+            val intent = Intent(this, sceneType.classRef).apply {
                 putExtra(SimpleSceneActivity.EXTRA_LAYOUT_DESCRIPTION_ID, sceneRes)
             }
             startActivity(intent)
@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val sceneList = listOf(
-        SceneType("Slide Scene", R.xml.scene01),
-        SceneType("Color Change Slide Scene", R.xml.scene02),
-        SceneType("Rotation and Color Change Slide Scene", R.xml.scene03),
-        SceneType("Position and Color Change Slide Scene", R.xml.scene04),
-        SceneType("Wavey and Color Change Slide Scene", R.xml.scene05))
+        Scene("Slide Scene", R.xml.scene01, SceneType.PRIMARY),
+        Scene("Color Change Slide Scene", R.xml.scene02, SceneType.PRIMARY),
+        Scene("Rotation and Color Change Slide Scene", R.xml.scene03, SceneType.PRIMARY),
+        Scene("Position and Color Change Slide Scene", R.xml.scene04, SceneType.PRIMARY),
+        Scene("Wavey and Color Change Slide Scene", R.xml.scene05, SceneType.PRIMARY))
 }

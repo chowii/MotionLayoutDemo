@@ -4,11 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 
 class SceneAdapter(
-    private val sceneList: List<SceneType>,
-    private val onSceneTypeClicked: (Int) -> Unit
+    private val sceneList: List<Scene>,
+    private val onSceneTypeClicked: (Int, SceneType) -> Unit
 ) : RecyclerView.Adapter<SceneAdapter.SceneViewHolder>() {
 
     override fun getItemCount(): Int = sceneList.size
@@ -21,10 +22,10 @@ class SceneAdapter(
     }
 
     override fun onBindViewHolder(holder: SceneViewHolder, position: Int) {
-        val (sceneName, sceneRes) = sceneList[position]
+        val (sceneName, sceneRes, sceneType) = sceneList[position]
         with(holder) {
             bind(sceneName)
-            itemView.setOnClickListener { onSceneTypeClicked(sceneRes) }
+            itemView.setOnClickListener { onSceneTypeClicked(sceneRes, sceneType) }
         }
     }
 
