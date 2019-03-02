@@ -7,68 +7,67 @@
             motion:constraintSetStart="@+id/start"
             motion:duration="100">
         <OnSwipe
-                motion:dragDirection="dragRight"
+                motion:dragDirection="dragLeft"
                 motion:touchAnchorId="@id/motion_view"
-                motion:touchAnchorSide="right"/>
+                motion:touchAnchorSide="left"/>
 
         <KeyFrameSet>
-            <KeyAttribute
-                    motion:keyPositionType="pathRelative"
-                    android:rotation="45"
-                    motion:framePosition="25"
+            <KeyPosition
+                    motion:framePosition="15"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentX="0.75"
+                    motion:curveFit="spline"
+                    motion:drawPath="rectangles"
                     motion:target="@id/motion_view"/>
-            <KeyAttribute
-                    motion:keyPositionType="pathRelative"
-                    android:rotation="90"
-                    motion:framePosition="50"
+            <KeyPosition
+                    motion:framePosition="35"
+                    motion:keyPositionType="parentRelative"
+                    motion:percentY="0.70"
+                    motion:curveFit="spline"
+                    motion:drawPath="rectangles"
                     motion:target="@id/motion_view"/>
-            <KeyAttribute
-                    motion:keyPositionType="pathRelative"
-                    android:rotation="135"
-                    motion:framePosition="75"
-                    motion:target="@id/motion_view"/>
-            <KeyAttribute
-                    motion:keyPositionType="pathRelative"
-                    android:rotation="180"
-                    motion:framePosition="100"
-                    motion:target="@id/motion_view"/>
+            <!--if variation is possible-->
+            <!--<KeyPosition-->
+                    <!--motion:framePosition="25"-->
+                    <!--motion:keyPositionType="parentRelative"-->
+                    <!--motion:percentX="0.65"-->
+                    <!--motion:percentY="0.85"-->
+                    <!--motion:curveFit="spline"-->
+                    <!--motion:drawPath="rectangles"-->
+                    <!--motion:target="@id/motion_view"/>-->
         </KeyFrameSet>
     </Transition>
-    <ConstraintSet android:id="@+id/start">
-        <Constraint
-                android:id="@+id/motion_view"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="8dp"
-                motion:layout_constraintBottom_toBottomOf="parent"
-                motion:layout_constraintStart_toStartOf="parent"
-                motion:layout_constraintTop_toTopOf="parent">
+        <ConstraintSet android:id="@+id/start">
+            <Constraint
+                    android:id="@+id/motion_view"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="8dp"
+                    motion:layout_constraintBottom_toBottomOf="parent"
+                    motion:layout_constraintStart_toStartOf="parent"
+                    motion:layout_constraintTop_toTopOf="parent">
 
-            <CustomAttribute
-                    motion:attributeName="BackgroundColor"
-                    motion:customColorValue="#D81B60"/>
-        </Constraint>
 
-    </ConstraintSet>
-    <ConstraintSet android:id="@+id/end">
-        <Constraint
-                android:id="@+id/motion_view"
-                android:layout_width="128dp"
-                android:layout_height="128dp"
-                android:layout_margin="4dp"
-                android:translationX="100dp"
-                android:translationY="20dp"
-                android:translationZ="10dp"
-                android:layout_marginBottom="8dp"
-                motion:layout_constraintEnd_toEndOf="parent"
-                motion:layout_constraintStart_toStartOf="parent"
-                motion:layout_constraintBottom_toBottomOf="parent">
+                <CustomAttribute
+                        motion:attributeName="BackgroundColor"
+                        motion:customColorValue="#D81B60"/>
+            </Constraint>
 
-            <CustomAttribute
-                    motion:attributeName="BackgroundColor"
-                    motion:customColorValue="#9999FF"/>
-        </Constraint>
-    </ConstraintSet>
+        </ConstraintSet>
+        <ConstraintSet android:id="@+id/end">
+            <Constraint
+                    android:id="@+id/motion_view"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_marginBottom="24dp"
+                    motion:layout_constraintEnd_toEndOf="parent"
+                    motion:layout_constraintBottom_toBottomOf="parent">
+
+                <CustomAttribute
+                        motion:attributeName="BackgroundColor"
+                        motion:customColorValue="#9999FF"/>
+            </Constraint>
+        </ConstraintSet>
 
 
 </MotionScene>

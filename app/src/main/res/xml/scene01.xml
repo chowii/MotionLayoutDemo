@@ -7,9 +7,9 @@
             motion:constraintSetStart="@+id/start"
             motion:duration="100">
         <OnSwipe
-                motion:dragDirection="dragUp"
+                motion:dragDirection="dragRight"
                 motion:touchAnchorId="@id/motion_view"
-                motion:touchAnchorSide="bottom"/>
+                motion:touchAnchorSide="right"/>
 
         <ConstraintSet android:id="@+id/start">
             <Constraint

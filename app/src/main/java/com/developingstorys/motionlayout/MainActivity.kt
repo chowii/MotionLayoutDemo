@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private val sceneList = listOf(
         SceneType("Slide Scene", R.xml.scene01),
         SceneType("Color Change Slide Scene", R.xml.scene02),
-        SceneType("Position and Color Change Slide Scene", R.xml.scene03),
-        SceneType("Rotation and Color Change Slide Scene", R.xml.scene04)
+        SceneType("Rotation and Color Change Slide Scene", R.xml.scene03),
+        SceneType("Position and Color Change Slide Scene", R.xml.scene04)
     )
 }

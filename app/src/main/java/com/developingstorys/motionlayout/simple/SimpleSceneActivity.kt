@@ -12,6 +12,10 @@ class SimpleSceneActivity : AppCompatActivity() {
         setContentView(R.layout.activity_scene)
         val layoutDescriptionId = intent?.extras?.getInt(EXTRA_LAYOUT_DESCRIPTION_ID) ?: 0
         motion_layout?.loadLayoutDescription(layoutDescriptionId)
+
+        checkbox.setOnCheckedChangeListener { _, isChecked ->
+            motion_layout.setDebugMode(if (isChecked) 2 else 0)
+        }
     }
 
 

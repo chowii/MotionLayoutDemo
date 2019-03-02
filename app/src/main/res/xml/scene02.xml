@@ -7,9 +7,9 @@
             motion:constraintSetStart="@+id/start"
             motion:duration="100">
         <OnSwipe
-                motion:dragDirection="dragUp"
+                motion:dragDirection="dragRight"
                 motion:touchAnchorId="@id/motion_view"
-                motion:touchAnchorSide="bottom"/>
+                motion:touchAnchorSide="right"/>
 
         <ConstraintSet android:id="@+id/start">
             <Constraint
@@ -32,15 +32,10 @@
                     android:id="@+id/motion_view"
                     android:layout_width="128dp"
                     android:layout_height="128dp"
-                    android:layout_margin="4dp"
-                    android:translationX="0dp"
-                    android:layout_marginEnd="8dp"
-                    android:translationY="20dp"
-                    android:translationZ="10dp"
+                    android:layout_marginBottom="8dp"
                     motion:layout_constraintEnd_toEndOf="parent"
                     motion:layout_constraintStart_toStartOf="parent"
                     motion:layout_constraintBottom_toBottomOf="parent">
-
 
                 <CustomAttribute
                         motion:attributeName="BackgroundColor"

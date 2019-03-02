@@ -4,5 +4,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="scene"
+        android:textColor="@android:color/white"
         android:textAllCaps="false"
         style="@style/Button.Primary" />
