@@ -9,20 +9,20 @@
         <OnSwipe
                 motion:dragDirection="dragLeft"
                 motion:touchAnchorId="@id/motion_view"
-                motion:touchAnchorSide="left"/>
+                motion:touchAnchorSide="right"/>
 
         <KeyFrameSet>
             <KeyPosition
                     motion:framePosition="15"
-                    motion:keyPositionType="parentRelative"
-                    motion:percentX="0.75"
+                    motion:keyPositionType="deltaRelative"
+                    motion:percentY="0.70"
                     motion:curveFit="spline"
                     motion:drawPath="rectangles"
                     motion:target="@id/motion_view"/>
             <KeyPosition
                     motion:framePosition="35"
                     motion:keyPositionType="parentRelative"
-                    motion:percentY="0.70"
+                    motion:percentX="0.55"
                     motion:curveFit="spline"
                     motion:drawPath="rectangles"
                     motion:target="@id/motion_view"/>
