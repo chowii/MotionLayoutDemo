@@ -59,6 +59,7 @@
                     android:id="@+id/motion_view"
                     android:layout_width="128dp"
                     android:layout_height="128dp"
+                    android:layout_marginEnd="24dp"
                     android:layout_marginBottom="24dp"
                     motion:layout_constraintEnd_toEndOf="parent"
                     motion:layout_constraintBottom_toBottomOf="parent">

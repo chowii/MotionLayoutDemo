@@ -12,53 +12,15 @@
                 motion:touchAnchorId="@id/motion_view"
                 motion:touchAnchorSide="right"/>
 
-        <KeyFrameSet>
-            <KeyAttribute
-                    motion:keyPositionType="pathRelative"
-                    android:rotation="45"
-                    motion:framePosition="25"
-                    motion:target="@id/motion_view"/>
-            <KeyAttribute
-                    motion:keyPositionType="pathRelative"
-                    android:rotation="90"
+        <KeyFrameSet>`
+            <KeyTimeCycle
+                    android:rotation="100"
                     motion:framePosition="50"
-                    motion:target="@id/motion_view"/>
-            <KeyAttribute
-                    motion:keyPositionType="pathRelative"
-                    android:rotation="245"
-                    motion:framePosition="75"
-                    motion:target="@id/motion_view"/>
-            <KeyAttribute
-                    motion:keyPositionType="pathRelative"
-                    android:rotation="360"
-                    motion:framePosition="100"
-                    motion:target="@id/motion_view"/>
+                    motion:target="@id/motion_view"
+                    motion:waveOffset="5"
+                    motion:wavePeriod="1"
+                    motion:waveShape="bounce" />
         </KeyFrameSet>
-
-
-    <KeyFrameSet>
-        <KeyCycle
-                motion:framePosition="15"
-                motion:target="@id/motion_view"
-                motion:waveOffset="0"
-                motion:wavePeriod="0"
-
-                motion:waveShape="cos" />
-        <KeyCycle
-                android:translationY="50dp"
-                motion:framePosition="50"
-                motion:target="@id/motion_view"
-                motion:waveOffset=".05"
-                motion:wavePeriod="1"
-                motion:waveShape="cos" />
-        <KeyCycle
-                android:translationY="50dp"
-                motion:framePosition="100"
-                motion:target="@id/motion_view"
-                motion:waveOffset="0"
-                motion:wavePeriod="0"
-                motion:waveShape="cos" />
-    </KeyFrameSet>
     </Transition>
     <ConstraintSet android:id="@+id/start">
         <Constraint
@@ -82,9 +44,8 @@
                 android:layout_width="128dp"
                 android:layout_height="128dp"
                 android:layout_margin="4dp"
-                android:translationX="100dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:translationY="20dp"
                 android:translationZ="10dp"
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintStart_toStartOf="parent"
