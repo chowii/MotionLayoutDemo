@@ -19,6 +19,9 @@
         <activity
                 android:name=".simple.SimpleSceneActivity"
                 android:theme="@style/AppTheme"/>
+        <activity
+                android:name=".transitionfragment.FragmentTransitionActivity"
+                android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

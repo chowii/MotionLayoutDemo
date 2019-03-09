@@ -32,5 +32,7 @@ class MainActivity : AppCompatActivity() {
         Scene("Color Change Slide Scene", R.xml.scene02, SceneType.PRIMARY),
         Scene("Rotation and Color Change Slide Scene", R.xml.scene03, SceneType.PRIMARY),
         Scene("Position and Color Change Slide Scene", R.xml.scene04, SceneType.PRIMARY),
-        Scene("Wavey and Color Change Slide Scene", R.xml.scene05, SceneType.PRIMARY))
+        Scene("Wavey and Color Change Slide Scene", R.xml.scene05, SceneType.PRIMARY),
+        Scene("Fragment Transition", R.xml.scene_fragment_transition, SceneType.FRAGMENT_TRANSITION)
+    )
 }
