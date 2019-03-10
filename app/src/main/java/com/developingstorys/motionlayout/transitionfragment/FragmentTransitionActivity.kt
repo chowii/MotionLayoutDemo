@@ -58,15 +58,13 @@ class FragmentTransitionActivity : AppCompatActivity(), MotionLayout.TransitionL
             if (isAtEnd && fragment is MainFragment) {
                 fragmentRef?.let {
                     fragment = it
+                    supportFragmentManager.beginTransaction().replace(R.id.container, fragment).commit()
                 }
-                supportFragmentManager.beginTransaction().replace(R.id.container, fragment).commit()
             }
         } else {
-            val isAtStart = progress < 0.25f
-            if (isAtStart && fragment !is MainFragment) {
-                fragmentRef?.let {
-                    fragment = it
-                }
+            val isAtStart = progress < 0.26f
+            if (isAtStart && fragment === fragmentRef) {
+                fragment = MainFragment.newInstance()
                 supportFragmentManager.beginTransaction().replace(R.id.container, fragment).commit()
             }
         }
