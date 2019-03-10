@@ -39,9 +39,6 @@
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintBottom_toBottomOf="parent">
-            <CustomAttribute
-                motion:attributeName="BackgroundColor"
-                motion:customColorValue="@android:color/white" />
         </Constraint>
     </ConstraintSet>
 
@@ -56,9 +53,6 @@
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintBottom_toBottomOf="parent">
-            <CustomAttribute
-                motion:attributeName="BackgroundColor"
-                motion:customColorValue="@color/colorPrimary" />
         </Constraint>
     </ConstraintSet>
 

@@ -1,6 +1,7 @@
 package com.developingstorys.motionlayout.transitionfragment
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
@@ -22,6 +23,12 @@ class FragmentTransitionActivity : AppCompatActivity(), MotionLayout.TransitionL
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragment_transition)
 
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeButtonEnabled(true)
+        }
+
         with(activityFragmentTransaction) {
             val sceneExtra =
                 intent?.extras?.getSerializable(EXTRA_LAYOUT_DESCRIPTION_ID) as MainActivity.Companion.SceneExtra
@@ -40,6 +47,13 @@ class FragmentTransitionActivity : AppCompatActivity(), MotionLayout.TransitionL
         }
     }
 
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            android.R.id.home -> finish()
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
     override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
     }

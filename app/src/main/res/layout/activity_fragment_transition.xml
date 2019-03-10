@@ -7,6 +7,18 @@
         android:layout_height="match_parent"
         android:id="@+id/activityFragmentTransaction">
 
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:title="Fragment Transaction"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
     <com.developingstorys.motionlayout.TouchFrameLayout
             android:id="@+id/container"
             android:layout_width="100dp"
