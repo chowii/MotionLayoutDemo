@@ -5,4 +5,4 @@
         android:layout_height="wrap_content"
         android:padding="24dp"
         android:text="@string/long_text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
