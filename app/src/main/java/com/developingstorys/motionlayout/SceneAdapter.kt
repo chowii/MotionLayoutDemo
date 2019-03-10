@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class SceneAdapter(
     private val sceneList: List<Scene>,
-    private val onSceneTypeClicked: (Int, SceneType) -> Unit
+    private val onSceneTypeClicked: (Scene) -> Unit
 ) : RecyclerView.Adapter<SceneAdapter.SceneViewHolder>() {
 
     override fun getItemCount(): Int = sceneList.size
@@ -22,10 +22,10 @@ class SceneAdapter(
     }
 
     override fun onBindViewHolder(holder: SceneViewHolder, position: Int) {
-        val (sceneName, sceneRes, sceneType) = sceneList[position]
+        val scene = sceneList[position]
         with(holder) {
-            bind(sceneName)
-            itemView.setOnClickListener { onSceneTypeClicked(sceneRes, sceneType) }
+            bind(scene.sceneName)
+            itemView.setOnClickListener { onSceneTypeClicked(scene) }
         }
     }
 

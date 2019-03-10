@@ -3,9 +3,11 @@ package com.developingstorys.motionlayout
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.developingstorys.motionlayout.simple.SimpleSceneActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.Serializable
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,21 +20,28 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun onSceneTypeClicked(): (Int, SceneType) -> Unit {
-        return { sceneRes, sceneType ->
-            val intent = Intent(this, sceneType.classRef).apply {
-                putExtra(SimpleSceneActivity.EXTRA_LAYOUT_DESCRIPTION_ID, sceneRes)
+    private fun onSceneTypeClicked(): (Scene) -> Unit {
+        return { scene ->
+            val intent = Intent(this, scene.sceneType.activityRef).apply {
+                putExtra(EXTRA_LAYOUT_DESCRIPTION_ID, SceneExtra(scene))
             }
             startActivity(intent)
         }
     }
 
     private val sceneList = listOf(
-        Scene("Slide Scene", R.xml.scene01, SceneType.PRIMARY),
-        Scene("Color Change Slide Scene", R.xml.scene02, SceneType.PRIMARY),
-        Scene("Rotation and Color Change Slide Scene", R.xml.scene03, SceneType.PRIMARY),
-        Scene("Position and Color Change Slide Scene", R.xml.scene04, SceneType.PRIMARY),
-        Scene("Wavey and Color Change Slide Scene", R.xml.scene05, SceneType.PRIMARY),
-        Scene("Fragment Transition", R.xml.scene_fragment_transition, SceneType.FRAGMENT_TRANSITION)
+        Scene("Slide Scene", R.xml.scene01, SceneType.Primary),
+        Scene("Color Change Slide Scene", R.xml.scene02, SceneType.Primary),
+        Scene("Rotation and Color Change Slide Scene", R.xml.scene03, SceneType.Primary),
+        Scene("Position and Color Change Slide Scene", R.xml.scene04, SceneType.Primary),
+        Scene("Wavey and Color Change Slide Scene", R.xml.scene05, SceneType.Primary),
+        Scene("Fragment Transition", R.xml.scene_fragment_transition, SceneType.FragmentTransition(FragmentScene.LONG_TEXT)),
+        Scene("Login Fragment Transition", R.xml.scene_fragment_transition, SceneType.FragmentTransition(FragmentScene.LOGIN))
     )
+
+    companion object {
+        const val EXTRA_LAYOUT_DESCRIPTION_ID = "layout_description_id"
+
+        data class SceneExtra(val sceneType: Scene): Serializable
+    }
 }
