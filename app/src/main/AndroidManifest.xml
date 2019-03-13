@@ -22,6 +22,9 @@
         <activity
                 android:name=".transitionfragment.FragmentTransitionActivity"
                 android:theme="@style/AppTheme"/>
+
+        <activity android:name=".youtube.YoutubeTransitionActivity"
+                  android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

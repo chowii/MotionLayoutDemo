@@ -33,16 +33,9 @@ class MainActivity : AppCompatActivity() {
         Scene("Rotation and Color Change Slide Scene", R.xml.scene03, SceneType.Primary),
         Scene("Position and Color Change Slide Scene", R.xml.scene04, SceneType.Primary),
         Scene("Wavey and Color Change Slide Scene", R.xml.scene05, SceneType.Primary),
-        Scene(
-            "Fragment Transition",
-            R.xml.scene_fragment_transition,
-            SceneType.FragmentTransition(FragmentScene.LONG_TEXT)
-        ),
-        Scene(
-            "Login Fragment Transition",
-            R.xml.scene_fragment_transition,
-            SceneType.FragmentTransition(FragmentScene.LOGIN)
-        )
+        Scene("Fragment Transition", R.xml.scene_fragment_transition, SceneType.FragmentTransition(FragmentScene.LONG_TEXT)),
+        Scene("Login Fragment Transition", R.xml.scene_fragment_transition, SceneType.FragmentTransition(FragmentScene.LOGIN)),
+        Scene("Youtube Transition", R.xml.scene_youtube, SceneType.YoutubeTransition)
     )
 
     companion object {
