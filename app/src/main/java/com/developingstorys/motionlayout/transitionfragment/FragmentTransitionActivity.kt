@@ -61,12 +61,7 @@ class FragmentTransitionActivity : AppCompatActivity(), MotionLayout.TransitionL
     override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
     }
 
-    override fun onTransitionChange(
-        p0: MotionLayout?,
-        @LayoutRes startLayoutRes: Int,
-        @LayoutRes endLayoutRes: Int,
-        progress: Float
-    ) {
+    override fun onTransitionChange(layout: MotionLayout?, @LayoutRes startLayoutRes: Int, @LayoutRes endLayoutRes: Int, progress: Float) {
         if (progress - lastProgress > 0) {
             val isAtEnd = Math.abs(progress - 1f) < 0.75f
             if (isAtEnd && fragment is MainFragment) {
