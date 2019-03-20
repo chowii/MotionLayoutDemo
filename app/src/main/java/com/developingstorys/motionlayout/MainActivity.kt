@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() {
         Scene("Wavey and Color Change Slide Scene", R.xml.scene05, SceneType.Primary),
         Scene("Fragment Transition", R.xml.scene_fragment_transition, SceneType.FragmentTransition(FragmentScene.LONG_TEXT)),
         Scene("Login Fragment Transition", R.xml.scene_fragment_transition, SceneType.FragmentTransition(FragmentScene.LOGIN)),
-        Scene("Youtube Transition", R.xml.scene_youtube, SceneType.YoutubeTransition)
+        Scene("Youtube Transition", R.xml.scene_youtube, SceneType.YoutubeTransition),
+        Scene("MultiState Transition", R.xml.scene_multistate, SceneType.MultiState)
     )
 
     companion object {

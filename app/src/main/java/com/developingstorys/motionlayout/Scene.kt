@@ -16,6 +16,7 @@ sealed class SceneType(val activityRef: Class<out AppCompatActivity>) : Serializ
     object Primary : SceneType(SimpleSceneActivity::class.java)
     object CoordinatorLayout : SceneType(MainActivity::class.java) // todo create for coordinator layouts
     object YoutubeTransition : SceneType(YoutubeTransitionActivity::class.java)
+    object MultiState : SceneType(MultiStateActivity::class.java)
     data class FragmentTransition(val fragmentScene: FragmentScene) : SceneType(FragmentTransitionActivity::class.java)
 }
 
