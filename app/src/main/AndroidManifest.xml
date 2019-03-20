@@ -25,6 +25,9 @@
 
         <activity android:name=".youtube.YoutubeTransitionActivity"
                   android:theme="@style/AppTheme"/>
+
+        <activity android:name=".MultiStateActivity"
+                  android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>
