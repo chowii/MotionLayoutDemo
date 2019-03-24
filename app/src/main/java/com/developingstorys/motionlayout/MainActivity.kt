@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        recycler_view.apply {
+        recyclerViewPad.apply {
             adapter = SceneAdapter(sceneList, onSceneTypeClicked())
             layoutManager = GridLayoutManager(this@MainActivity, 3)
         }

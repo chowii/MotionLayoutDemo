@@ -43,6 +43,7 @@
         </Constraint>
     </ConstraintSet>
 
+    <!-- State 1-->
     <ConstraintSet android:id="@+id/half">
         <Constraint android:id="@id/left_pad"
                     android:layout_width="360dp"
@@ -64,6 +65,7 @@
         </Constraint>
     </ConstraintSet>
 
+    <!--State 2-->
     <ConstraintSet android:id="@+id/full">
         <Constraint android:id="@id/left_pad"
                     android:layout_width="360dp"

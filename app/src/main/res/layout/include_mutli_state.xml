@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/scene_multistate">
+
+    <View
+            android:id="@+id/left_pad"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+            android:id="@+id/left_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_right"
+            android:rotation="180"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/left_pad"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPad"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/left_pad"
+            app:layout_constraintEnd_toEndOf="@id/left_pad"
+            app:layout_constraintStart_toStartOf="@id/left_pad"
+            app:layout_constraintTop_toTopOf="@id/left_pad"
+    />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
